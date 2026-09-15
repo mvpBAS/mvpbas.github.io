@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mvpBAS</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --card: #1a1d27;
+      --text: #e6e8ef;
+      --muted: #9aa0b0;
+      --accent: #58a6ff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid #2a2e3d;
+      border-radius: 16px;
+      padding: 48px 40px;
+      max-width: 520px;
+      text-align: center;
+    }
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #05070c;
+      font-size: 42px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+    h1 { font-size: 28px; margin-bottom: 8px; }
+    p.desc { color: var(--muted); margin-bottom: 24px; }
+    .links { display: flex; gap: 12px; justify-content: center; }
+    .links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 14px;
+      border: 1px solid var(--accent);
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    .links a:hover { background: var(--accent); color: #05070c; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="avatar">B</div>
+    <h1>mvpBAS</h1>
+    <p class="desc">Bem-vindo ao meu site hospedado no GitHub&nbsp;Pages.</p>
+    <div class="links">
+      <a href="https://github.com/mvpbas" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </main>
+</body>
+</html>
