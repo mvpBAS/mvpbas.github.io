@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<article class="post-content">
+  <h1 class="page-title">{{ page.title }}</h1>
+  <p class="post-time">Publicado em {{ page.date | date: "%d/%m/%Y" }}</p>
+  {{ content }}
+  <nav class="archives">
+    <a href="{{ '/' | relative_url }}">&larr; Voltar para a lista de posts</a>
+  </nav>
+</article>

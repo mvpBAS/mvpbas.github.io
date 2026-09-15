@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'pt-BR' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title | escape }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  {% seo %}
+  {% feed_meta %}
+  <style>
+    :root {
+      --bg: #0f1117;
+      --card: #1a1d27;
+      --text: #e6e8ef;
+      --muted: #9aa0b0;
+      --accent: #58a6ff;
+      --border: #2a2e3d;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    header.site-header {
+      margin-bottom: 40px;
+      padding: 28px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #05070c;
+      font-size: 28px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    header h1 { font-size: 22px; }
+    header p { color: var(--muted); font-size: 14px; }
+    h1.page-title { font-size: 28px; margin-bottom: 24px; }
+    ul.posts { list-style: none; }
+    ul.posts li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      padding: 14px 4px;
+      border-bottom: 1px solid var(--border);
+    }
+    ul.posts time { color: var(--muted); font-size: 13px; white-space: nowrap; }
+    .post-time { color: var(--muted); font-size: 14px; margin: 8px 0 24px; }
+    article.post-content h1,
+    article.post-content h2,
+    article.post-content h3 { margin: 28px 0 12px; line-height: 1.3; }
+    article.post-content p,
+    article.post-content li { margin-bottom: 14px; }
+    article.post-content ul,
+    article.post-content ol { padding-left: 24px; margin-bottom: 14px; }
+    article.post-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    article.post-content code {
+      background: #262b3a;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+    article.post-content pre {
+      background: #262b3a;
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin-bottom: 14px;
+    }
+    article.post-content blockquote {
+      border-left: 3px solid var(--accent);
+      padding-left: 16px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    nav.archives { margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a class="avatar" href="{{ '/' | relative_url }}" aria-label="Início">B</a>
+      <div>
+        <h1><a href="{{ '/' | relative_url }}" style="color: var(--text);">{{ site.title }}</a></h1>
+        <p>Blog de software, Windows e curiosidades.</p>
+      </div>
+    </header>
+    <main>
+      {{ content }}
+    </main>
+    <footer style="color: var(--muted); font-size: 13px; margin-top: 48px; text-align: center;">
+      <a href="{{ site.url }}/feed.xml">Feed RSS</a> — Feito com GitHub Pages
+    </footer>
+  </div>
+</body>
+</html>

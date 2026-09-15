@@ -1,0 +1,11 @@
+title: mvpBAS
+description: >-
+  Blog pessoal hospedado no GitHub Pages. Tutoriais de software,
+  dicas de Windows e registros diversos.
+baseurl: ""
+url: "https://mvpbas.github.io"
+permalink: /:slug/
+lang: pt-BR
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
